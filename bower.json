@@ -1,0 +1,17 @@
+{
+  "name": "offline-decrypt",
+  "description": "Decrypt wallets offline",
+  "main": "index.html",
+  "authors": [
+    "Justin Tormey"
+  ],
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
