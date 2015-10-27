@@ -4,10 +4,10 @@
   "description": "Decrypt wallets offline",
   "main": "main.js",
   "scripts": {
-    "start": "electron .",
+    "start": "node_modules/electron-prebuilt/cli.js .",
     "postinstall": "node_modules/bower/bin/bower install",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "pack": "electron-packager ./ Blockchain --all --version=0.34.1 --icon=icons/icon.icns --overwrite --ignore=Blockchain-.*"
+    "pack": "node_modules/electron-packager/cli.js ./ Blockchain --all --version=0.34.1 --icon=icons/icon.icns --overwrite --ignore='Blockchain-.*|electron-.*'"
   },
   "author": "Justin Tormey",
   "dependencies": {
@@ -15,5 +15,9 @@
     "bower": "^1.6.5",
     "jquery": "^2.1.4",
     "node-env-file": "^0.1.7"
+  },
+  "devDependencies": {
+    "electron-packager": "^5.1.0",
+    "electron-prebuilt": "^0.34.1"
   }
 }
