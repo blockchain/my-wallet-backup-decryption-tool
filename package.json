@@ -4,7 +4,8 @@
   "description": "Decrypt wallets offline",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pack": "electron-packager ./ Blockchain --all --version=0.34.1 --icon=icons/icon.icns --overwrite --ignore=Blockchain-.*"
   },
   "author": "Justin Tormey",
   "dependencies": {
