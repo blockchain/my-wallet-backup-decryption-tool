@@ -3,7 +3,7 @@
 var bcsrc = 'node_modules/blockchain-wallet-client/src';
 
 var stub          = require('m-stub')
-  , Wallet        = stub.inject(bcsrc + '/blockchain-wallet', bcsrc + '/wallet')
+  , Wallet        = stub.inject(bcsrc + '/blockchain-wallet', 'js/wallet-stub')
   , WalletCrypto  = require('blockchain-wallet-client/src/wallet-crypto')
   , fs            = require('fs')
   , $             = require('jquery');
