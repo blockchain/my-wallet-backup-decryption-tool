@@ -2,3 +2,7 @@
 body {
   background: #f7f7f7;
 }
+
+.no-display {
+  display: none;
+}

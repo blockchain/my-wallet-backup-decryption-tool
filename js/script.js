@@ -11,10 +11,13 @@ MyWallet.syncWallet = function () { console.log('mock sync') };
 function decryptWallet(event) {
   event.preventDefault();
 
-  var walletFilePath  = document.getElementById('walletFile').files[0].path
-    , encryptedWallet = fs.readFileSync(walletFilePath)
+  var walletFile      = document.getElementById('walletFile').files[0]
+    , walletText      = $('#walletText').val()
     , walletPassword  = $('#walletPassword').val()
     , secondPassword  = $('#secondPassword').val();
+
+  var encryptedWallet = walletFile ?
+    fs.readFileSync(walletFile.path) : walletText;
 
   var decryptError = function (e) {
     console.log(e);
@@ -54,6 +57,16 @@ function json2html(obj) {
   return html;
 }
 
+var walletInputType = 'file';
+function toggleWalletInputType(event) {
+  event.preventDefault();
+  $('.wallet-input').val('');
+  $('#wallet-input-' + walletInputType).hide();
+  walletInputType = walletInputType === 'file' ? 'text' : 'file';
+  $('#wallet-input-' + walletInputType).show();
+}
+
 $(function () {
   $('#walletForm').on('submit', decryptWallet);
+  $('.toggleWalletInputType').on('click', toggleWalletInputType);
 });

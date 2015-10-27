@@ -12,10 +12,15 @@
       <h1>My Wallet <small>Be Your Own Bank.</small></h1>
       <div id="step-1" class="step">
         <form id="walletForm" novalidate>
-          <div class="form-group">
+          <div id="wallet-input-file" class="form-group">
             <label>Encrypted Wallet Backup</label>
-            <input id="walletFile" type="file" class="form-control">
-            <p class="help-block">Load the wallet file you downloaded from blockchain.info</p>
+            <input id="walletFile" type="file" class="wallet-input form-control">
+            <p class="help-block">Load the wallet file you downloaded from blockchain.info, or <a class="toggleWalletInputType" href="#">click here</a> to paste your wallet backup.</p>
+          </div>
+          <div id="wallet-input-text" class="no-display form-group">
+            <label>Encrypted Wallet Backup</label>
+            <textarea id="walletText" rows="5" class="wallet-input form-control"></textarea>
+            <p class="help-block">Paste the wallet text you copied from blockchain.info, or <a class="toggleWalletInputType" href="#">click here</a> load a wallet backup file.</p>
           </div>
           <div class="form-group">
             <label>Main Wallet Password</label>
