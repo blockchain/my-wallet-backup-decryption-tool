@@ -21,11 +21,10 @@ function decryptWallet(event) {
 
   var decryptError = function (e) {
     console.log(e);
-    $('#step-2').text(e);
+    $('#error-message').text(e);
   };
 
   var decryptSuccess = function (walletObject) {
-    console.log(walletObject);
     var mywallet = new Wallet(walletObject);
     if (mywallet.isDoubleEncrypted) {
       if (!mywallet.validateSecondPassword(secondPassword)) {
@@ -33,7 +32,12 @@ function decryptWallet(event) {
       }
       mywallet.decrypt(secondPassword, undefined, decryptError);
     }
-    var walletJSON = JSON.parse(JSON.stringify(mywallet.toJSON()));
+    console.log(mywallet);
+    try {
+      var walletJSON = JSON.parse(JSON.stringify(mywallet.toJSON()));
+    } catch (e) {
+      return decryptError(e);
+    }
     $('#step-1').hide();
     $('#step-2').html(json2html(walletJSON));
   };

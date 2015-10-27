@@ -9,32 +9,39 @@
   </head>
   <body>
     <div class="container">
-      <h1>My Wallet <small>Be Your Own Bank.</small></h1>
+      <div class="col-sm-12">
+        <h1>My Wallet <small>Be Your Own Bank.</small></h1>
+      </div>
       <div id="step-1" class="step">
         <form id="walletForm" novalidate>
-          <div id="wallet-input-file" class="form-group">
+          <div id="wallet-input-file" class="form-group col-sm-12">
             <label>Encrypted Wallet Backup</label>
             <input id="walletFile" type="file" class="wallet-input form-control">
             <p class="help-block">Load the wallet file you downloaded from blockchain.info, or <a class="toggleWalletInputType" href="#">click here</a> to paste your wallet backup.</p>
           </div>
-          <div id="wallet-input-text" class="no-display form-group">
+          <div id="wallet-input-text" class="no-display form-group col-sm-12">
             <label>Encrypted Wallet Backup</label>
             <textarea id="walletText" rows="5" class="wallet-input form-control"></textarea>
             <p class="help-block">Paste the wallet text you copied from blockchain.info, or <a class="toggleWalletInputType" href="#">click here</a> load a wallet backup file.</p>
           </div>
-          <div class="form-group">
+          <div class="form-group col-sm-12">
             <label>Main Wallet Password</label>
             <input id="walletPassword" type="password" class="form-control">
           </div>
-          <div class="form-group">
+          <div class="form-group col-sm-12">
             <label>Second Password</label>
             <input id="secondPassword" type="password" class="form-control">
             <p class="help-block">Only required if your wallet is double encrypted</p>
           </div>
-          <button type="submit" class="btn btn-default">Decrypt</button>
+          <div class="col-sm-3">
+            <button type="submit" class="btn btn-default btn-block">Decrypt</button>
+          </div>
+          <div class="col-sm-9">
+            <span class="help-block"><p id="error-message" class="text-danger"></p></span>
+          </div>
         </form>
       </div>
-      <div id="step-2" class="step">
+      <div id="step-2" class="step col-sm-12">
       </div>
     </div>
   </body>
