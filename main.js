@@ -7,7 +7,7 @@ var mainWindow = null;
 loadEnv('.env');
 
 app.on('window-all-closed', function() {
-  if (process.platform != 'darwin') app.quit();
+  app.quit();
 });
 
 app.on('ready', function() {
