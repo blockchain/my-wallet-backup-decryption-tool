@@ -15,6 +15,7 @@ npm start
 ## Package
 
 ```sh
+npm run build
 npm run pack
 ```
 

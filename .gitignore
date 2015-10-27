@@ -1,6 +1,7 @@
 node_modules/
 bower_components/
-Blockchain-*
+build/
+dist/
 
 npm-debug.log
 .env

@@ -7,7 +7,8 @@
     "start": "node_modules/electron-prebuilt/cli.js .",
     "postinstall": "node_modules/bower/bin/bower install",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "pack": "node_modules/electron-packager/cli.js ./ Blockchain --all --version=0.34.1 --icon=icons/icon.icns --overwrite --ignore='Blockchain-.*|electron-.*'"
+    "build": "node_modules/gulp/bin/gulp.js build",
+    "pack": "node_modules/electron-packager/cli.js ./build Blockchain --out=dist/ --all --overwrite --version=0.34.1 --icon=icons/icon"
   },
   "author": "Justin Tormey",
   "dependencies": {
@@ -18,6 +19,9 @@
   },
   "devDependencies": {
     "electron-packager": "^5.1.0",
-    "electron-prebuilt": "^0.34.1"
+    "electron-prebuilt": "^0.34.1",
+    "gulp": "^3.9.0",
+    "gulp-clean": "^0.3.1",
+    "run-sequence": "^1.1.4"
   }
 }
