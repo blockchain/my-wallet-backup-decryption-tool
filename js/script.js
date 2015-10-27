@@ -39,12 +39,38 @@ function decryptWallet(event) {
       return decryptError(e);
     }
     $('#step-1').hide();
-    $('#step-2').html(json2html(walletJSON));
+    $('#step-2').show();
+    $('#step-2 #wallet-info').html(generateAddressTable(walletJSON));
+    $('#viewFullJSON').on('click', function (event) {
+      event.preventDefault();
+      $('#step-2').html(json2html(walletJSON));
+    });
   };
 
   WalletCrypto.decryptWallet(
     encryptedWallet, walletPassword, decryptSuccess, decryptError
   );
+}
+
+function generateAddressTable(wallet) {
+  var table = '<table class="table">'
+  table += '\
+    <tr>\
+      <th>#</th>\
+      <th>Address</th>\
+      <th>Private Key</th>\
+    </tr>';
+  for (var index in wallet.keys) {
+    var key = wallet.keys[index];
+    table += '\
+      <tr>\
+        <td>' + index + '</td>\
+        <td>' + key.addr + '</td>\
+        <td>' + key.priv + '</td>\
+      </tr>';
+  }
+  table += '</table>';
+  return table;
 }
 
 function json2html(obj) {
