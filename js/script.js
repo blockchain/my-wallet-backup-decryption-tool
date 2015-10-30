@@ -57,6 +57,7 @@ function generateAddressTable(wallet) {
   table += '\
     <tr>\
       <th>#</th>\
+      <th>Label</th>\
       <th>Address</th>\
       <th>Private Key</th>\
     </tr>';
@@ -65,6 +66,7 @@ function generateAddressTable(wallet) {
     table += '\
       <tr>\
         <td>' + index + '</td>\
+        <td>' + (key.label || '<i>unlabeled</i>') + '</td>\
         <td>' + key.addr + '</td>\
         <td>' + key.priv + '</td>\
       </tr>';
