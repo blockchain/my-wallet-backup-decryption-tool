@@ -38,13 +38,8 @@ function decryptWallet(event) {
     } catch (e) {
       return decryptError(e);
     }
-    $('#step-1').hide();
-    $('#step-2').show();
-    $('#step-2 #wallet-info').html(generateAddressTable(walletJSON));
-    $('#viewFullJSON').on('click', function (event) {
-      event.preventDefault();
-      $('#step-2').html(json2html(walletJSON));
-    });
+    goToStep(2);
+    toggleWalletView(walletJSON);
   };
 
   try {
@@ -93,6 +88,24 @@ function json2html(obj) {
   return html;
 }
 
+function goToStep(step) {
+  $('.step').hide();
+  $('#step-' + step).show();
+}
+
+function toggleWalletView(data) {
+  var walletView = 'Table';
+  function setWalletView(event) {
+    event && event.preventDefault();
+    var innerHTML = walletView === 'JSON' ? json2html(data) : generateAddressTable(data);
+    var innerText = walletView = walletView === 'JSON' ? 'Table' : 'JSON';
+    $('#step-2 #wallet-info').html(innerHTML);
+    $('#toggleWalletView').text('View ' + innerText);
+  }
+  setWalletView();
+  $('#toggleWalletView').on('click', setWalletView);
+}
+
 var walletInputType = 'file';
 function toggleWalletInputType(event) {
   event.preventDefault();
@@ -105,4 +118,5 @@ function toggleWalletInputType(event) {
 $(function () {
   $('#walletForm').on('submit', decryptWallet);
   $('.toggleWalletInputType').on('click', toggleWalletInputType);
+  $('#goBack').on('click', goToStep.bind(null, 1));
 });
