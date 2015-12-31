@@ -47,9 +47,13 @@ function decryptWallet(event) {
     });
   };
 
-  WalletCrypto.decryptWallet(
-    encryptedWallet, walletPassword, decryptSuccess, decryptError
-  );
+  try {
+    WalletCrypto.decryptWallet(
+      encryptedWallet, walletPassword, decryptSuccess, decryptError
+    );
+  } catch (e) {
+    decryptError(e.message || e);
+  }
 }
 
 function generateAddressTable(wallet) {
