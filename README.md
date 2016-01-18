@@ -1,4 +1,5 @@
-# Offline Wallet Decrypter
+
+# My Wallet Backup Decryption Tool
 
 ## Install
 
@@ -9,6 +10,7 @@ npm install
 ## Run
 
 ```sh
+npm run build
 npm start
 ```
 

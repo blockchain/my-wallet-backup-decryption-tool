@@ -1,16 +1,16 @@
 {
-  "name": "offline-decrypt",
+  "name": "my-wallet-backupt-decryption-tool",
   "version": "0.2.0",
-  "description": "Decrypt wallets offline",
+  "description": "Decrypt wallets backups offline",
   "main": "main.js",
   "scripts": {
     "start": "node_modules/electron-prebuilt/cli.js .",
     "postinstall": "node_modules/bower/bin/bower install",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "node_modules/gulp/bin/gulp.js build",
-    "pack": "node_modules/electron-packager/cli.js ./build Blockchain --out=dist/ --all --overwrite --version=0.34.1 --icon=icons/icon"
+    "pack": "node_modules/electron-packager/cli.js ./build 'My Wallet Backup Decryption Tool' --out=dist/ --all --overwrite --version=0.34.1 --icon=icons/icon"
   },
-  "author": "Justin Tormey",
+  "author": "Justin Tormey <justin@blockchain.com>",
   "dependencies": {
     "blockchain-wallet-client": "^3.1.3",
     "bower": "^1.6.5",
