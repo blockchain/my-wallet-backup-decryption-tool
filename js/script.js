@@ -24,6 +24,11 @@ function decryptWallet(event) {
     $('#error-message').text(e);
   };
 
+  var resetForm = function () {
+    $('#error-message').text('');
+    $('#walletForm')[0].reset();
+  };
+
   var decryptSuccess = function (walletObject) {
     var mywallet = new Wallet(walletObject);
     if (mywallet.isDoubleEncrypted) {
@@ -38,6 +43,7 @@ function decryptWallet(event) {
     } catch (e) {
       return decryptError(e);
     }
+    resetForm();
     goToStep(2);
     toggleWalletView(walletJSON);
   };
