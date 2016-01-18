@@ -8,7 +8,12 @@
     "postinstall": "node_modules/bower/bin/bower install",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "node_modules/gulp/bin/gulp.js build",
-    "pack": "node_modules/electron-packager/cli.js ./build 'My Wallet Backup Decryption Tool' --out=dist/ --all --overwrite --version=0.34.1 --icon=icons/icon"
+    "pack": "node_modules/electron-packager/cli.js ./build 'My Wallet Backup Decryption Tool' --out=dist/ --all --overwrite --version=0.34.1 --icon=icons/icon",
+    "pack:osx": "node_modules/electron-packager/cli.js ./build 'My Wallet Backup Decryption Tool' --out=dist/ --platform=darwin --arch=x64 --overwrite --version=0.34.1 --icon=icons/icon",
+    "pack:win32": "node_modules/electron-packager/cli.js ./build 'My Wallet Backup Decryption Tool' --out=dist/ --platform=win32 --arch=ia32 --overwrite --version=0.34.1 --icon=icons/icon",
+    "pack:win64": "node_modules/electron-packager/cli.js ./build 'My Wallet Backup Decryption Tool' --out=dist/ --platform=win32 --arch=x64 --overwrite --version=0.34.1 --icon=icons/icon",
+    "pack:linux32": "node_modules/electron-packager/cli.js ./build 'My Wallet Backup Decryption Tool' --out=dist/ --platform=linux --arch=ia32 --version=0.34.1 --icon=icons/icon",
+    "pack:linux64": "node_modules/electron-packager/cli.js ./build 'My Wallet Backup Decryption Tool' --out=dist/ --platform=linux --arch=x64 --overwrite --version=0.34.1 --icon=icons/icon"
   },
   "author": "Justin Tormey <justin@blockchain.com>",
   "dependencies": {

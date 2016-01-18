@@ -19,6 +19,10 @@ npm start
 ```sh
 npm run build
 npm run pack
+
+# package for specific environment
+# options: osx, win32, win64, linux32, linux64
+npm run pack:osx
 ```
 
 To zip for distribution:
