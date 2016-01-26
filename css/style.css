@@ -1,8 +1,72 @@
+/*fonts*/
+@font-face {
+  font-family: Roboto-Bold;
+  src: url(fonts/roboto/Roboto-Bold.ttf);
+}
+
+@font-face {
+  font-family: Roboto-Black;
+  src: url(fonts/roboto/Roboto-Black.ttf);
+}
+
+@font-face {
+  font-family: Roboto-Medium;
+  src: url(fonts/roboto/Roboto-Medium.ttf);
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(fonts/roboto/Roboto-Regular.ttf);
+}
+
+@font-face {
+  font-family: Roboto-Light;
+  src: url(fonts/roboto/Roboto-Light.ttf);
+}
+
+@font-face {
+  font-family: Roboto-Thin;
+  src: url(fonts/roboto/Roboto-Thin.ttf);
+}
+
+
+/*general*/
+html, body {
+  height: 100%;
+  font-family: Roboto;
+}
 
 body {
-  background: #f7f7f7;
+  background: #1b8ac7;
+  position: relative;
+}
+
+body > .container {
+  top: 50%;
+  left: 15%;
+  height: 70%;
+  max-width: 70%;
+  background: #fff;
+  position: absolute;
+  border-radius: 10px;
+  transform: translateY(-50%);
 }
 
 .no-display {
   display: none;
+}
+
+h1 {
+  color: #6C6C6C;
+}
+
+h1 small {
+  font-family: Roboto-Light;
+}
+
+h1 small:after {
+  top: -7px;
+  content: '\00ae';
+  font-size: .75em;
+  position: relative;
 }
