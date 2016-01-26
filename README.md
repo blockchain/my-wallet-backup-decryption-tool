@@ -7,6 +7,12 @@
 npm install
 ```
 
+## Develop
+
+```sh
+echo 'ENV=dev' > .env
+```
+
 ## Run
 
 ```sh
