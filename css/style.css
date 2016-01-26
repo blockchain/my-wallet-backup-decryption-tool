@@ -33,6 +33,7 @@
 /*general*/
 html, body {
   height: 100%;
+  font-size: 14px;
   font-family: Roboto;
 }
 
@@ -41,6 +42,17 @@ body {
   position: relative;
 }
 
+.no-display {
+  display: none;
+}
+
+#icon {
+  height: 40px;
+  margin-top: 5px;
+  padding-left: 1.25em;
+}
+
+/*container*/
 body > .container {
   top: 50%;
   left: 15%;
@@ -50,10 +62,6 @@ body > .container {
   position: absolute;
   border-radius: 10px;
   transform: translateY(-50%);
-}
-
-.no-display {
-  display: none;
 }
 
 h1 {
@@ -69,4 +77,17 @@ h1 small:after {
   content: '\00ae';
   font-size: .75em;
   position: relative;
+}
+
+/*form*/
+.form-control {
+  border-radius: 0px;
+  box-shadow: none !important;
+  &:focus {
+    border-color: #1b8ac7;
+  }
+}
+
+input[type=file]:focus, input[type=checkbox]:focus, input[type=radio]:focus {
+  outline: 0px !important;
 }
