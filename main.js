@@ -3,16 +3,23 @@ var app           = require('app')
   , Menu          = require('menu')
   , env           = require('node-env-file');
 
-var mainWindow = null;
+var mainWindow = null
+  , windowRatio = [650, 780]
 
 loadEnv('.env');
+
+var dev = process.env.DEV || false;
+
+if (dev) {
+  windowRatio = [1200, 800]
+}
 
 app.on('window-all-closed', function() {
   app.quit();
 });
 
 app.on('ready', function() {
-  mainWindow = new BrowserWindow({width: 1200, height: 800});
+  mainWindow = new BrowserWindow({width: windowRatio[0], height: windowRatio[1]});
   mainWindow.loadUrl('file://' + __dirname + '/index.html');
 
   if (process.env.ENV === 'dev') mainWindow.openDevTools();
