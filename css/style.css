@@ -59,6 +59,7 @@ body > .container {
   height: 70%;
   max-width: 70%;
   background: #fff;
+  overflow: scroll;
   position: absolute;
   border-radius: 10px;
   transform: translateY(-50%);
