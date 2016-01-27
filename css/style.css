@@ -64,6 +64,13 @@ body > .container {
   transform: translateY(-50%);
 }
 
+@media (max-width: 500px) {
+  body > .container {
+    height: 80%;
+    width: 80%;
+  }
+}
+
 h1 {
   color: #6C6C6C;
 }
@@ -118,4 +125,17 @@ input[type="password"]:focus + label {
 
 input[type=file]:focus, input[type=checkbox]:focus, input[type=radio]:focus {
   outline: 0px !important;
+}
+
+/*table*/
+.table {
+  table-layout: fixed;
+}
+
+.table th:first-child {
+  width: 10%;
+}
+
+.table > tbody > tr > td {
+  word-wrap: break-word;
 }
