@@ -1,8 +1,93 @@
+/*fonts*/
+@font-face {
+  font-family: Roboto-Bold;
+  src: url(fonts/roboto/Roboto-Bold.ttf);
+}
+
+@font-face {
+  font-family: Roboto-Black;
+  src: url(fonts/roboto/Roboto-Black.ttf);
+}
+
+@font-face {
+  font-family: Roboto-Medium;
+  src: url(fonts/roboto/Roboto-Medium.ttf);
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(fonts/roboto/Roboto-Regular.ttf);
+}
+
+@font-face {
+  font-family: Roboto-Light;
+  src: url(fonts/roboto/Roboto-Light.ttf);
+}
+
+@font-face {
+  font-family: Roboto-Thin;
+  src: url(fonts/roboto/Roboto-Thin.ttf);
+}
+
+
+/*general*/
+html, body {
+  height: 100%;
+  font-size: 14px;
+  font-family: Roboto;
+}
 
 body {
-  background: #f7f7f7;
+  background: #1b8ac7;
+  position: relative;
 }
 
 .no-display {
   display: none;
+}
+
+#icon {
+  height: 40px;
+  margin-top: 5px;
+  padding-left: 1.25em;
+}
+
+/*container*/
+body > .container {
+  top: 50%;
+  left: 15%;
+  height: 70%;
+  max-width: 70%;
+  background: #fff;
+  position: absolute;
+  border-radius: 10px;
+  transform: translateY(-50%);
+}
+
+h1 {
+  color: #6C6C6C;
+}
+
+h1 small {
+  font-family: Roboto-Light;
+}
+
+h1 small:after {
+  top: -7px;
+  content: '\00ae';
+  font-size: .75em;
+  position: relative;
+}
+
+/*form*/
+.form-control {
+  border-radius: 0px;
+  box-shadow: none !important;
+  &:focus {
+    border-color: #1b8ac7;
+  }
+}
+
+input[type=file]:focus, input[type=checkbox]:focus, input[type=radio]:focus {
+  outline: 0px !important;
 }

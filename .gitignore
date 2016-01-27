@@ -6,3 +6,7 @@ zip/
 
 npm-debug.log
 .env
+
+*.DS_STORE
+
+css/LICENSE.txt
