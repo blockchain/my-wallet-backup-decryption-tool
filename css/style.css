@@ -59,6 +59,7 @@ body > .container {
   height: 70%;
   max-width: 70%;
   background: #fff;
+  overflow: scroll;
   position: absolute;
   border-radius: 10px;
   transform: translateY(-50%);
@@ -138,4 +139,13 @@ input[type=file]:focus, input[type=checkbox]:focus, input[type=radio]:focus {
 
 .table > tbody > tr > td {
   word-wrap: break-word;
+}
+
+/*json*/
+#wallet-info pre p {
+  margin-bottom: 0px;
+}
+
+#copy-to-clip {
+  float: right;
 }

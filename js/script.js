@@ -103,10 +103,13 @@ function toggleWalletView(data) {
   var walletView = 'Table';
   function setWalletView(event) {
     event && event.preventDefault();
-    var innerHTML = walletView === 'JSON' ? json2html(data) : generateAddressTable(data);
+    var innerHTML = walletView === 'JSON' ? '<pre>' + json2html(data) + '</pre>' : generateAddressTable(data);
+    var copyToClip = walletView === 'JSON' ? 'Copy to Clipboard' : '';
     var innerText = walletView = walletView === 'JSON' ? 'Table' : 'JSON';
+
     $('#step-2 #wallet-info').html(innerHTML);
     $('#toggleWalletView').text('View ' + innerText);
+    $('#copy-to-clip').text(copyToClip);
   }
   setWalletView();
   $('#toggleWalletView').on('click', setWalletView);
@@ -128,9 +131,27 @@ function toggleWalletInputClass() {
   $(this).addClass(filled);
 }
 
+function triggerCopy(event) {
+  event.preventDefault();
+
+  var text = document.querySelector('pre');
+  var range = document.createRange();
+  var selection;
+
+  range.setStartBefore(text.firstChild);
+  range.setEndAfter(text.lastChild);
+
+  selection = getSelection();
+  selection.removeAllRanges();
+  selection.addRange(range);
+
+  document.execCommand('copy');
+}
+
 $(function () {
   $('#walletForm').on('submit', decryptWallet);
   $('.toggleWalletInputType').on('click', toggleWalletInputType);
   $('#goBack').on('click', goToStep.bind(null, 1));
   $('input[type="password"').on('keydown', toggleWalletInputClass);
+  $('#copy-to-clip').on('click', triggerCopy);
 });
