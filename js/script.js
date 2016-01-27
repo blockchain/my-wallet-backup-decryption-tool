@@ -121,8 +121,16 @@ function toggleWalletInputType(event) {
   $('#wallet-input-' + walletInputType).show();
 }
 
+function toggleWalletInputClass() {
+  var filled = $(this).val().length > 0 ? 'filled' : '';
+
+  $(this).removeClass('filled');
+  $(this).addClass(filled);
+}
+
 $(function () {
   $('#walletForm').on('submit', decryptWallet);
   $('.toggleWalletInputType').on('click', toggleWalletInputType);
   $('#goBack').on('click', goToStep.bind(null, 1));
+  $('input[type="password"').on('keydown', toggleWalletInputClass);
 });

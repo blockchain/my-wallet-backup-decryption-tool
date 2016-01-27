@@ -88,6 +88,34 @@ h1 small:after {
   }
 }
 
+.form-group {
+  position: relative;
+  margin-bottom: 35px;
+}
+
+input[type="password"] {
+  z-index: 1;
+  height: 45px;
+  line-height: 45px;
+  position: relative;
+  background-color: transparent;
+}
+
+input[type="password"] + label {
+  top: 11px;
+  left: 27px;
+  position: absolute;
+  transition: top 0.3s 0.3s, left 0.3s;
+}
+
+input[type="password"].filled + label,
+input[type="password"]:active + label,
+input[type="password"]:focus + label {
+  top: -22px;
+  left: 15px;
+  transition: top 0.3s, left 0.3s 0.3s;
+}
+
 input[type=file]:focus, input[type=checkbox]:focus, input[type=radio]:focus {
   outline: 0px !important;
 }
