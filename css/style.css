@@ -140,3 +140,12 @@ input[type=file]:focus, input[type=checkbox]:focus, input[type=radio]:focus {
 .table > tbody > tr > td {
   word-wrap: break-word;
 }
+
+/*json*/
+#wallet-info pre p {
+  margin-bottom: 0px;
+}
+
+#copy-to-clip {
+  float: right;
+}
