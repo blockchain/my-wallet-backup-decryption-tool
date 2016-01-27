@@ -35,7 +35,7 @@ To zip for distribution:
 
 ```sh
 cd dist/
-zip -r my-wallet-backup-decrypt-osx.zip My\ Wallet\ Backup\ Decryption\ Tool-darwin-x64/
+zip -r --symlinks my-wallet-backup-decrypt-osx.zip My\ Wallet\ Backup\ Decryption\ Tool.app/
 ```
 
 Note for OSX users: in order to package for windows you must have `wine` installed. Install `wine` with Homebrew as follows:
