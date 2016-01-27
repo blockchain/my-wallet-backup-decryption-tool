@@ -8,7 +8,7 @@ var mainWindow = null
 
 loadEnv('.env');
 
-var dev = process.env.DEV || false;
+var dev = process.env.ENV || false;
 
 if (dev) {
   windowRatio = [1200, 800]
