@@ -133,8 +133,17 @@ input[type=file]:focus, input[type=checkbox]:focus, input[type=radio]:focus {
   table-layout: fixed;
 }
 
-.table th:first-child {
-  width: 10%;
+.table th:nth-child(1) {
+  width: 5%;
+}
+.table th:nth-child(2) {
+  width: 20%;
+}
+.table th:nth-child(3) {
+  width: 35%;
+}
+.table th:nth-child(4) {
+  width: 40%;
 }
 
 .table > tbody > tr > td {
