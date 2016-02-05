@@ -38,7 +38,7 @@ html, body {
 }
 
 body {
-  background: #1b8ac7;
+  background: #049bd4;
   position: relative;
 }
 
@@ -48,8 +48,8 @@ body {
 
 #icon {
   height: 40px;
-  margin-top: 5px;
-  padding-left: 1.25em;
+  margin-top: 20px;
+  padding-left: 20px;
 }
 
 /*container*/
@@ -92,7 +92,7 @@ h1 small:after {
   border-radius: 0px;
   box-shadow: none !important;
   &:focus {
-    border-color: #1b8ac7;
+    border-color: #049bd4;
   }
 }
 
