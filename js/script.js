@@ -1,8 +1,8 @@
 'use strict';
 
-var MyWallet      = require('blockchain-wallet-client/src/wallet')
-  , Wallet        = require('blockchain-wallet-client/src/blockchain-wallet')
-  , WalletCrypto  = require('blockchain-wallet-client/src/wallet-crypto')
+var MyWallet      = require('blockchain-wallet-client-prebuilt/src/wallet')
+  , Wallet        = require('blockchain-wallet-client-prebuilt/src/blockchain-wallet')
+  , WalletCrypto  = require('blockchain-wallet-client-prebuilt/src/wallet-crypto')
   , fs            = require('fs')
   , $             = require('jquery');
 

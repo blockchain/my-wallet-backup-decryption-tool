@@ -17,7 +17,7 @@
   },
   "author": "Justin Tormey <justin@blockchain.com>",
   "dependencies": {
-    "blockchain-wallet-client": "3.1.*",
+    "blockchain-wallet-client-prebuilt": "3.22.*",
     "bower": "1.6.*",
     "jquery": "2.1.*",
     "node-env-file": "0.1.*"
