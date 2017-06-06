@@ -1,6 +1,6 @@
 {
   "name": "my-wallet-backupt-decryption-tool",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Decrypt wallets backups offline",
   "main": "main.js",
   "scripts": {
