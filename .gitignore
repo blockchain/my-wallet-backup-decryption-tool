@@ -3,6 +3,7 @@ bower_components/
 build/
 dist/
 zip/
+electron-packager/
 
 npm-debug.log
 .env
