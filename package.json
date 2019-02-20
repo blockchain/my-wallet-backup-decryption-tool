@@ -3,6 +3,9 @@
   "version": "1.0.1",
   "description": "Decrypt wallets backups offline",
   "main": "main.js",
+  "engines" : {
+    "node" : "4"
+  },
   "scripts": {
     "start": "node_modules/.bin/electron . || node_modules/.bin/electron.cmd .",
     "postinstall": "node_modules/.bin/bower install || node_modules/.bin/bower.cmd install",
@@ -24,7 +27,7 @@
   "author": "Justin Tormey <justin@blockchain.com>",
   "dependencies": {
     "blockchain-wallet-client-prebuilt": "3.22.*",
-    "bower": "1.6.*",
+    "bower": "1.8.*",
     "jquery": "2.1.*",
     "node-env-file": "0.1.*"
   },

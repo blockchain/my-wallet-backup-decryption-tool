@@ -3,6 +3,8 @@
 
 ## Install
 
+Requirements: node@4, npm@3
+
 ```sh
 npm install
 ```
