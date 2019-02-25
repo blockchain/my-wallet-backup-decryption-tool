@@ -1,10 +1,10 @@
 {
   "name": "my-wallet-backupt-decryption-tool",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Decrypt wallets backups offline",
   "main": "main.js",
-  "engines" : {
-    "node" : "4"
+  "engines": {
+    "node": "4"
   },
   "scripts": {
     "start": "node_modules/.bin/electron . || node_modules/.bin/electron.cmd .",
