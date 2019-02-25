@@ -4,7 +4,7 @@ var app           = require('app')
   , env           = require('node-env-file');
 
 var mainWindow = null
-  , windowRatio = [650, 780]
+  , windowRatio = [960, 720]
 
 loadEnv('.env');
 

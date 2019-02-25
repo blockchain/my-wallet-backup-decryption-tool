@@ -25,7 +25,7 @@ var GLOBS = {
     'icons/*',
     'img/*.png',
     'bower_components/bootstrap/dist/css/bootstrap.min.css',
-    'node_modules/blockchain-wallet-client/**/*',
+    'node_modules/blockchain-wallet-client-prebuilt/**/*',
     'node_modules/jquery/**/*',
     'node_modules/node-env-file/**/*'
   ]

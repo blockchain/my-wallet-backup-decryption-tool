@@ -95,13 +95,16 @@ function json2html(obj) {
 }
 
 function goToStep(step) {
+  console.log('Called: goToStep', step);
   $('.step').hide();
   $('#step-' + step).show();
 }
 
 function toggleWalletView(data) {
+  console.log('Called: toggleWalletView');
   var walletView = 'Table';
   function setWalletView(event) {
+    console.log('Called: setWalletView');
     event && event.preventDefault();
     var innerHTML = walletView === 'JSON' ? '<pre>' + json2html(data) + '</pre>' : generateAddressTable(data);
     var copyToClip = walletView === 'JSON' ? 'Copy to Clipboard' : '';
@@ -110,6 +113,7 @@ function toggleWalletView(data) {
     $('#step-2 #wallet-info').html(innerHTML);
     $('#toggleWalletView').text('View ' + innerText);
     $('#copy-to-clip').text(copyToClip);
+    console.log('walletView=' + walletView);
   }
   setWalletView();
   $('#toggleWalletView').on('click', setWalletView);
@@ -117,11 +121,13 @@ function toggleWalletView(data) {
 
 var walletInputType = 'file';
 function toggleWalletInputType(event) {
+  console.log('Called: toggleWalletInputType');
   event.preventDefault();
   $('.wallet-input').val('');
   $('#wallet-input-' + walletInputType).hide();
   walletInputType = walletInputType === 'file' ? 'text' : 'file';
   $('#wallet-input-' + walletInputType).show();
+  console.log('walletInputType=' + walletInputType);
 }
 
 function toggleWalletInputClass() {
@@ -132,6 +138,7 @@ function toggleWalletInputClass() {
 }
 
 function triggerCopy(event) {
+  console.log('Called: triggerCopy');
   event.preventDefault();
 
   var text = document.querySelector('pre');
@@ -152,6 +159,9 @@ $(function () {
   $('#walletForm').on('submit', decryptWallet);
   $('.toggleWalletInputType').on('click', toggleWalletInputType);
   $('#goBack').on('click', goToStep.bind(null, 1));
-  $('input[type="password"').on('keydown', toggleWalletInputClass);
+  $('input[type="password"').on('input', toggleWalletInputClass);
   $('#copy-to-clip').on('click', triggerCopy);
+  console.log('Document ready, handlers are set');
 });
+
+console.log('Loaded: script.js');
